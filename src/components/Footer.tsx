@@ -1,4 +1,6 @@
 
+import { Link } from "react-router-dom";
+
 const Footer = () => {
   return (
     <footer className="bg-gray-900 text-white py-16">
@@ -14,11 +16,11 @@ const Footer = () => {
           <div>
             <h3 className="font-semibold mb-4">Quick Links</h3>
             <ul className="space-y-2 text-gray-400">
-              <li><a href="#about" className="hover:text-white transition-colors">About</a></li>
-              <li><a href="#blog" className="hover:text-white transition-colors">Blog</a></li>
-              <li><a href="#careers" className="hover:text-white transition-colors">Careers</a></li>
-              <li><a href="#privacy" className="hover:text-white transition-colors">Privacy</a></li>
-              <li><a href="#contact" className="hover:text-white transition-colors">Contact</a></li>
+              <li><Link to="/#our-mission" className="hover:text-white transition-colors">About Us</Link></li>
+              <li><Link to="/posts" className="hover:text-white transition-colors">Blog</Link></li>
+              <li><Link to="/careers" className="hover:text-white transition-colors">Careers</Link></li>
+              <li><Link to="/#products" className="hover:text-white transition-colors">Products</Link></li>
+              <li><Link to="/#topics" className="hover:text-white transition-colors">Topics</Link></li>
             </ul>
           </div>
           
@@ -48,7 +50,7 @@ const Footer = () => {
         </div>
         
         <div className="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400">
-          <p>&copy; 2024 EurekaLabs. All rights reserved.</p>
+          <p>&copy; 2025 EurekaLabs. All rights reserved.</p>
         </div>
       </div>
     </footer>

@@ -1,7 +1,7 @@
 
 const InsightGraphSection = () => {
   return (
-    <section className="py-24 bg-gradient-to-r from-blue-50 to-purple-50">
+    <section className="py-24 bg-gradient-to-r from-blue-50 to-purple-50" id="products">
       <div className="container px-4 md:px-6">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div className="relative">
@@ -23,36 +23,35 @@ const InsightGraphSection = () => {
                   <div className="w-4 h-4 bg-eureka-blue rounded-full animate-pulse-slow" style={{animationDelay: '2.5s'}}></div>
                 </div>
               </div>
-              <div className="mt-6 text-center">
-                <div className="text-sm text-muted-foreground">Insight Graph Visualization</div>
-              </div>
             </div>
           </div>
           
           <div className="space-y-6">
             <h2 className="text-3xl md:text-4xl font-bold">
-              Your Personal{" "}
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-eureka-blue to-eureka-purple">
-                Scientific Knowledge Graph
-              </span>
+              Products
             </h2>
             
             <p className="text-lg text-muted-foreground leading-relaxed">
-              EurekaLabs builds and updates a scientific graph tailored to your research style, areas, and goals. Like a second brain for your lab.
+              Tools designed to accelerate scientific discovery.
             </p>
             
             <div className="space-y-4">
               <div className="flex items-start space-x-3">
                 <div className="w-2 h-2 bg-eureka-blue rounded-full mt-2"></div>
-                <p className="text-muted-foreground">Connects your research interests with relevant literature</p>
+                <p className="text-muted-foreground">
+                  <a href="https://www.reseatchpilot.me" target="_blank" rel="noopener noreferrer" className="font-medium text-eureka-blue hover:underline">
+                  Research Idea of the Day  
+                  </a>
+                  — Find inspiration for you next brackthrough project
+                </p>
               </div>
               <div className="flex items-start space-x-3">
                 <div className="w-2 h-2 bg-eureka-purple rounded-full mt-2"></div>
-                <p className="text-muted-foreground">Identifies knowledge gaps and opportunities</p>
+                <p className="text-muted-foreground"><span className="font-medium">Idea Lab</span> — Tailor a seed ideas to your expertise and research goals</p>
               </div>
               <div className="flex items-start space-x-3">
-                <div className="w-2 h-2 bg-eureka-cyan rounded-full mt-2"></div>
-                <p className="text-muted-foreground">Learns from your citation patterns and preferences</p>
+                <div className="w-2 h-2 bg-green-500 rounded-full mt-2"></div>
+                <p className="text-muted-foreground"><span className="font-medium">Proposal Assistant</span> — Turn ideas into structured, persuasive grant proposals in minutes</p>
               </div>
             </div>
           </div>

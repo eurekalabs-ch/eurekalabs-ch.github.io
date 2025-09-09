@@ -11,11 +11,13 @@ const CTASection = () => {
             Ready to accelerate your next discovery?
           </h2>
           <p className="text-xl mb-8 text-blue-100">
-            Join thousands of researchers already using EurekaLabs
+            Join thousands of researchers already using EurekaLabs products
           </p>
-          <Button size="lg" className="bg-white text-eureka-blue hover:bg-gray-100">
-            Try EurekaLabs
-            <ArrowRight className="ml-2 h-4 w-4" />
+          <Button asChild size="lg" className="bg-white text-eureka-blue hover:bg-gray-100">
+            <a href="https://www.reseatchpilot.me" target="_blank" rel="noopener noreferrer">
+              Try Research Pilot
+              <ArrowRight className="ml-2 h-4 w-4 inline" />
+            </a>
           </Button>
         </div>
       </div>

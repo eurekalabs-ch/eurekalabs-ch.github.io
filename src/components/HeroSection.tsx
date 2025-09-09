@@ -9,24 +9,21 @@ const HeroSection = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div className="space-y-8">
             <h1 className="text-4xl md:text-6xl font-bold leading-tight">
-              Your Personal{" "}
+             Building a Personalized{" "}
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-eureka-blue to-eureka-purple">
-                Scientific Discovery
+                Scientific Discovery 
               </span>{" "}
               Engine
             </h1>
             
             <p className="text-xl text-muted-foreground leading-relaxed">
-              The world's first full-circle platform for AI-based accelerated discovery
+              The world's first full-circle platform for AGI-based scientific discovery
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4">
               <Button size="lg" className="bg-eureka-blue hover:bg-eureka-blue/90">
-                Request Demo
+                Try it now
                 <ArrowRight className="ml-2 h-4 w-4" />
-              </Button>
-              <Button size="lg" variant="outline">
-                Try Now
               </Button>
               <Button size="lg" variant="ghost" className="text-eureka-blue hover:text-eureka-blue/80">
                 Watch Overview
