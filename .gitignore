@@ -1,4 +1,5 @@
 node_modules
+*.key
 .DS_Store
 */.DS_Store
 CLAUDE.md
