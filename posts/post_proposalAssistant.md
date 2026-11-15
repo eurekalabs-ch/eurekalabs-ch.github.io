@@ -2,10 +2,12 @@
 title: "How We Created an AI-Powered Grant Proposal Assistant"
 date: "2025-08-11"
 author: "EurekaLabs Engineering"
-excerpt: "Building a sophisticated multi-agent system for scientific research."
+excerpt: "An early multi-agent system from 2025: nine specialized agents taking a research idea to a submission-ready NIH proposal, with an independent critic scoring it on the panel's own rubric."
 ---
 
 *Building a sophisticated multi-agent system for scientific research*
+
+> **A note added in November 2026.** This post describes work from the summer of 2025, when our multi-agent systems were pointed at research funding rather than at molecules. It is left here as it was written. The architecture it describes, specialized agents with separate responsibilities and an independent critic scoring the work against an external rubric, is the architecture we now run over protein design campaigns, where the rubric is a laboratory measurement rather than a review panel. We explain the move in [From text to molecules](/posts/from-text-to-molecules).
 
 ## The Challenge
 

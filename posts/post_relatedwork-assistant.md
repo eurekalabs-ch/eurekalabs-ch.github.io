@@ -2,10 +2,12 @@
 title: "A Virtual Research Assistant for Writing Related Work Sections Using Multi-Agent LLMs"
 date: "2025-08-12"
 author: "EurekaLabs Engineering"
-excerpt: "How we built an AI-powered system that automates the most time-consuming part of academic writing"
+excerpt: "An early multi-agent system from 2025: specialized agents that search, read, organize and write, with an independent reviewer scoring the result. The same division of labor now runs our protein design campaigns."
 ---
 
 *How we built an AI-powered system that automates the most time-consuming part of academic writing*
+
+> **A note added in November 2026.** This post describes work from the summer of 2025, when our multi-agent systems were pointed at the scientific literature rather than at molecules. It is left here as it was written. What carried forward is the structure: agents with separate responsibilities, evidence that has to be retrieved rather than recalled, and a reviewer that scores the output against criteria it did not choose. In our current work that reviewer is a physical measurement. We explain the move in [From text to molecules](/posts/from-text-to-molecules).
 
 ---
 
@@ -284,13 +286,6 @@ Researchers need to understand and verify AI-generated content. Our system provi
 
 The Related Work Assistant is available as an open-source project. We believe academic tools should be accessible to all researchers, regardless of institutional resources.
 
-**Get Started:**
-```bash
-git clone https://github.com/your-repo/related-work-assistant
-cd related-work-assistant
-uv sync
-related-work generate --interactive
-```
 
 ## Conclusion: The Future of Academic Writing
 
@@ -301,12 +296,6 @@ But we can make it dramatically more efficient and accessible. By handling the m
 The Related Work Assistant is just the beginning. As AI capabilities advance, we envision a future where every researcher has access to intelligent writing assistants that help them communicate their ideas more effectively and spend more time on discovery.
 
 *The age of AI-assisted academic writing has arrived. The question isn't whether to embrace it, but how quickly we can make it work for everyone.*
-
----
-
-**Try it yourself**: [GitHub Repository](https://github.com/your-repo/related-work-assistant)  
-**Documentation**: [Full docs and examples](./README.md)  
-**Contact**: Questions? Issues? We'd love to hear from you.
 
 ---
 

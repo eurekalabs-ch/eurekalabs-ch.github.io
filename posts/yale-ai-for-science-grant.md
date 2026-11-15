@@ -1,5 +1,5 @@
 ---
-title: "Our Own Claus Horn Wins the Yale AI for Science Grant"
+title: "Claus Horn awarded Yale AI for Science Grant"
 date: "2025-07-11"
 author: "EurekaLabs Team"
 excerpt: "An application led by Claus Horn, together with five Yale faculty collaborators, has been awarded the Yale AI for Science grant."
