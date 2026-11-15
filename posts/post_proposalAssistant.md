@@ -1,13 +1,17 @@
 ---
-title: "How We Created an AI-Powered Grant Proposal Assistant"
+title: "Multi-Agent Assistants for Grant Proposals and Literature Reviews"
 date: "2025-08-11"
 author: "EurekaLabs Engineering"
-excerpt: "An early multi-agent system from 2025: nine specialized agents taking a research idea to a submission-ready NIH proposal, with an independent critic scoring it on the panel's own rubric."
+excerpt: "Two early multi-agent systems from 2025: nine agents taking a research idea to a submission-ready NIH proposal, and six turning a project description into a related work section. Both put an independent reviewer between the work and the claim."
 ---
 
-*Building a sophisticated multi-agent system for scientific research*
+*Building sophisticated multi-agent systems for scientific research*
 
-> **A note added in November 2026.** This post describes work from the summer of 2025, when our multi-agent systems were pointed at research funding rather than at molecules. It is left here as it was written. The architecture it describes, specialized agents with separate responsibilities and an independent critic scoring the work against an external rubric, is the architecture we now run over protein design campaigns, where the rubric is a laboratory measurement rather than a review panel. We explain the move in [From text to molecules](/posts/from-text-to-molecules).
+> **A note added in November 2026.** This post describes work from the summer of 2025, when our multi-agent systems were pointed at the research workflow rather than at molecules. It is left here as it was written. The architecture it describes, specialized agents with separate responsibilities and an independent critic scoring the work against a rubric it did not write, is the architecture we now run over protein design campaigns, where the rubric is a laboratory measurement rather than a review panel. We explain the move in [From text to molecules](/posts/from-text-to-molecules).
+
+We built two systems that summer, on the same architecture and with the same conviction: that the way to make a language model do serious scholarly work is to stop asking one model to do all of it. The first takes a research idea to a submission-ready grant proposal. The second takes a project description to a related work section. Both are described below.
+
+# Part One: The Grant Proposal Assistant
 
 ## The Challenge
 
@@ -155,6 +159,33 @@ How do we know it works? Beyond technical metrics, success will ultimately be me
 - **Compliance Accuracy**: 95%+ success rate in meeting format and content requirements
 - **Content Quality**: Systematic improvement in NIH rubric scoring across all evaluated sections
 - **Literature Integration**: More comprehensive and relevant citation networks
+
+# Part Two: The Related Work Assistant
+
+Anyone who has written an academic paper knows the wall that is the Related Work section. You have the idea, you have the experiments, you have the results, and then you spend days searching databases, reading abstracts for relevance, grouping papers into themes, synthesizing across dozens of studies and formatting citations to a venue's satisfaction. The second system takes a plain-language research description and returns a publication-ready literature review.
+
+The insight is the same one behind the proposal assistant: writing a review is not one task but six distinct ones, and a single model asked to do all six does each of them adequately and none of them well. So there are six agents.
+
+| Agent | Role | Task |
+|---|---|---|
+| **Input Parser** | Research analyst | Extracts goals, gaps, methodology, keywords and constraints from the description. |
+| **Search** | Research librarian | Formulates search strategies and queries OpenAlex and Semantic Scholar, with quality filters and deduplication across sources. |
+| **Analysis** | Senior researcher | Summarizes each paper's contribution, identifies methods and findings, scores relevance from 1 to 10 with justification, and assigns themes. |
+| **Organization** | Academic editor | Groups papers into topics and subtopics, plans the narrative order, and identifies gaps and controversies. |
+| **Writer** | Academic writer | Synthesizes across studies rather than listing them, holding to academic tone and to the length and citation limits. |
+| **Reviewer** | Journal reviewer | Assesses comprehensiveness, balance, citation accuracy and clarity, scores the result and names specific improvements. |
+
+## The Loop That Makes It Work
+
+The agents run in sequence, but the sequence is not a pipeline that terminates. The reviewer scores the draft, and if the score falls below the threshold, by default 8.5 out of 10, the system diagnoses which stage is responsible and returns to it: too few papers sends it back to search with expanded queries, poor structure back to organization, weak synthesis back to the writer. It runs up to three iterations before finalizing.
+
+This is the part worth carrying forward. The reviewer does not merely grade the output, it routes the work back to whichever specialist can fix it, which is what makes the ensemble something other than a sequence of prompts.
+
+## Implementation
+
+The models are mixed by cost and difficulty. Local Ollama models handle the mechanical stages, parsing and search strategy. GPT-4 handles the stages that need reasoning: analysis, writing and review. The split cuts API cost by roughly 60% while leaving the hard stages on the stronger model. Orchestration is LangGraph, as in the proposal assistant, with Pydantic for validation and asynchronous queries running the database searches in parallel.
+
+On a typical run the system analyzes 30 to 50 papers in 5 to 15 minutes, scores 8.2 to 9.1 in human evaluation, and adheres to page and citation limits in 98% of cases.
 
 ## The Future of Research Support
 
