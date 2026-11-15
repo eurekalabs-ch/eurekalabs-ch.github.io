@@ -9,10 +9,10 @@ const CTASection = () => {
       <div className="container px-4 md:px-6">
         <div className="text-center text-white">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
-            Ready to accelerate your next discovery?
+            Have a target and an assay?
           </h2>
           <p className="text-xl mb-8 text-blue-100">
-            Work with us on the next campaign
+            We run design campaigns with partners, and we report what the measurements say.
           </p>
           <Button asChild size="lg" className="bg-white text-eureka-blue hover:bg-gray-100">
             {site.productUrl ? (

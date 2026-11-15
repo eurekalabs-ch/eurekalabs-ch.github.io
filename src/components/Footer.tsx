@@ -18,7 +18,7 @@ const Footer = () => {
           <div className="space-y-4">
             <div className="text-2xl font-bold text-eureka-blue">EurekaLabs</div>
             <p className="text-gray-400">
-              Accelerating scientific discovery through AI-powered research tools.
+              A research organization of AI Scientists for protein drug design.
             </p>
           </div>
 
@@ -26,10 +26,10 @@ const Footer = () => {
             <h3 className="font-semibold mb-4">Quick Links</h3>
             <ul className="space-y-2 text-gray-400">
               <li><Link to="/#our-mission" className="hover:text-white transition-colors">About Us</Link></li>
-              <li><Link to="/posts" className="hover:text-white transition-colors">Blog</Link></li>
+              <li><Link to="/posts" className="hover:text-white transition-colors">Research</Link></li>
               <li><Link to="/careers" className="hover:text-white transition-colors">Careers</Link></li>
-              <li><Link to="/#products" className="hover:text-white transition-colors">Products</Link></li>
-              <li><Link to="/#topics" className="hover:text-white transition-colors">Topics</Link></li>
+              <li><Link to="/#topics" className="hover:text-white transition-colors">What We Do</Link></li>
+              <li><Link to="/#how-it-works" className="hover:text-white transition-colors">How a Campaign Runs</Link></li>
             </ul>
           </div>
 

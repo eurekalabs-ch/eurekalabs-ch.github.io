@@ -5,8 +5,8 @@ import { Menu, X } from "lucide-react";
 import { site } from "@/lib/site";
 
 const navItems = [
-  { to: "/#products", label: "Products" },
-  { to: "/posts", label: "Blog" },
+  { to: "/#topics", label: "What We Do" },
+  { to: "/posts", label: "Research" },
   { to: "/#our-mission", label: "About Us" },
   { to: "/careers", label: "Careers" },
 ];
