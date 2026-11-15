@@ -5,8 +5,8 @@
   "type": "module",
   "scripts": {
     "dev": "npm run generate-posts && vite",
-    "build": "npm run generate-posts && vite build && cp dist/index.html dist/404.html",
-    "build:dev": "npm run generate-posts && vite build --mode development && cp dist/index.html dist/404.html",
+    "build": "npm run generate-posts && vite build && node scripts/prerender.js",
+    "build:dev": "npm run generate-posts && vite build --mode development && node scripts/prerender.js",
     "lint": "eslint .",
     "preview": "vite preview",
     "generate-posts": "node scripts/generate-posts.js"
