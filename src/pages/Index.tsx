@@ -4,9 +4,7 @@ import { useLocation } from "react-router-dom";
 import Header from "@/components/Header";
 import HeroSection from "@/components/HeroSection";
 import InsightGraphSection from "@/components/InsightGraphSection";
-import TrustedBySection from "@/components/TrustedBySection";
 import HowItWorksSection from "@/components/HowItWorksSection";
-import TestimonialsSection from "@/components/TestimonialsSection";
 import CTASection from "@/components/CTASection";
 import Footer from "@/components/Footer";
 import MissionSection from "@/components/MissionSection";
@@ -33,9 +31,7 @@ const Index = () => {
       <MissionSection />
       <TopicsSection />
       <InsightGraphSection />
-      <TrustedBySection />
       <HowItWorksSection />
-      <TestimonialsSection />
       <CTASection />
       <Footer />
     </div>

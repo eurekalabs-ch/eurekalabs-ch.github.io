@@ -1,18 +1,27 @@
-
 import { Link } from "react-router-dom";
+import { site } from "@/lib/site";
+
+const socialLabels: Record<string, string> = {
+  linkedin: "LinkedIn",
+  twitter: "X / Twitter",
+  github: "GitHub",
+};
 
 const Footer = () => {
+  const socials = Object.entries(site.social).filter(([, url]) => url);
+  const hasContact = Boolean(site.contactEmail) || socials.length > 0;
+
   return (
     <footer className="bg-gray-900 text-white py-16">
       <div className="container px-4 md:px-6">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div className={`grid grid-cols-1 gap-8 ${hasContact ? "md:grid-cols-3" : "md:grid-cols-2"}`}>
           <div className="space-y-4">
             <div className="text-2xl font-bold text-eureka-blue">EurekaLabs</div>
             <p className="text-gray-400">
               Accelerating scientific discovery through AI-powered research tools.
             </p>
           </div>
-          
+
           <div>
             <h3 className="font-semibold mb-4">Quick Links</h3>
             <ul className="space-y-2 text-gray-400">
@@ -23,34 +32,42 @@ const Footer = () => {
               <li><Link to="/#topics" className="hover:text-white transition-colors">Topics</Link></li>
             </ul>
           </div>
-          
+
+          {hasContact && (
           <div>
-            <h3 className="font-semibold mb-4">Social Media</h3>
-            <ul className="space-y-2 text-gray-400">
-              <li><a href="#" className="hover:text-white transition-colors">LinkedIn</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">Twitter</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">GitHub</a></li>
-            </ul>
+            <h3 className="font-semibold mb-4">Get in touch</h3>
+            {site.contactEmail && (
+              <p className="text-gray-400 mb-4">
+                <a
+                  href={`mailto:${site.contactEmail}`}
+                  className="hover:text-white transition-colors"
+                >
+                  {site.contactEmail}
+                </a>
+              </p>
+            )}
+            {socials.length > 0 && (
+              <ul className="space-y-2 text-gray-400">
+                {socials.map(([key, url]) => (
+                  <li key={key}>
+                    <a
+                      href={url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="hover:text-white transition-colors"
+                    >
+                      {socialLabels[key] ?? key}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            )}
           </div>
-          
-          <div>
-            <h3 className="font-semibold mb-4">Newsletter</h3>
-            <p className="text-gray-400 mb-4">Stay updated with the latest research insights</p>
-            <div className="flex">
-              <input 
-                type="email" 
-                placeholder="Enter your email" 
-                className="flex-1 px-3 py-2 bg-gray-800 border border-gray-700 rounded-l-md text-white placeholder-gray-400"
-              />
-              <button className="px-4 py-2 bg-eureka-blue hover:bg-eureka-blue/90 rounded-r-md transition-colors">
-                Subscribe
-              </button>
-            </div>
-          </div>
+          )}
         </div>
-        
+
         <div className="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400">
-          <p>&copy; 2025 EurekaLabs. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} EurekaLabs. All rights reserved.</p>
         </div>
       </div>
     </footer>

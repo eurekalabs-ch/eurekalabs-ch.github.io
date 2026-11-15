@@ -1,6 +1,7 @@
-
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
+import { Link } from "react-router-dom";
+import { site } from "@/lib/site";
 
 const CTASection = () => {
   return (
@@ -11,13 +12,25 @@ const CTASection = () => {
             Ready to accelerate your next discovery?
           </h2>
           <p className="text-xl mb-8 text-blue-100">
-            Join thousands of researchers already using EurekaLabs products
+            Work with us on the next campaign
           </p>
           <Button asChild size="lg" className="bg-white text-eureka-blue hover:bg-gray-100">
-            <a href="https://www.reseatchpilot.me" target="_blank" rel="noopener noreferrer">
-              Try Research Pilot
-              <ArrowRight className="ml-2 h-4 w-4 inline" />
-            </a>
+            {site.productUrl ? (
+              <a href={site.productUrl} target="_blank" rel="noopener noreferrer">
+                Try Research Pilot
+                <ArrowRight className="ml-2 h-4 w-4 inline" />
+              </a>
+            ) : site.contactEmail ? (
+              <a href={`mailto:${site.contactEmail}`}>
+                Get in touch
+                <ArrowRight className="ml-2 h-4 w-4 inline" />
+              </a>
+            ) : (
+              <Link to="/posts">
+                Read our research
+                <ArrowRight className="ml-2 h-4 w-4 inline" />
+              </Link>
+            )}
           </Button>
         </div>
       </div>

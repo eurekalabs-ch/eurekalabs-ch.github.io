@@ -1,4 +1,6 @@
 
+import { site } from "@/lib/site";
+
 const InsightGraphSection = () => {
   return (
     <section className="py-24 bg-gradient-to-r from-blue-50 to-purple-50" id="products">
@@ -39,15 +41,19 @@ const InsightGraphSection = () => {
               <div className="flex items-start space-x-3">
                 <div className="w-2 h-2 bg-eureka-blue rounded-full mt-2"></div>
                 <p className="text-muted-foreground">
-                  <a href="https://www.reseatchpilot.me" target="_blank" rel="noopener noreferrer" className="font-medium text-eureka-blue hover:underline">
-                  Research Idea of the Day  
-                  </a>
-                  — Find inspiration for you next brackthrough project
+                  {site.productUrl ? (
+                    <a href={site.productUrl} target="_blank" rel="noopener noreferrer" className="font-medium text-eureka-blue hover:underline">
+                      Research Idea of the Day
+                    </a>
+                  ) : (
+                    <span className="font-medium text-foreground">Research Idea of the Day</span>
+                  )}
+                  {" "}— Find inspiration for your next breakthrough project
                 </p>
               </div>
               <div className="flex items-start space-x-3">
                 <div className="w-2 h-2 bg-eureka-purple rounded-full mt-2"></div>
-                <p className="text-muted-foreground"><span className="font-medium">Idea Lab</span> — Tailor a seed ideas to your expertise and research goals</p>
+                <p className="text-muted-foreground"><span className="font-medium">Idea Lab</span> — Tailor a seed idea to your expertise and research goals</p>
               </div>
               <div className="flex items-start space-x-3">
                 <div className="w-2 h-2 bg-green-500 rounded-full mt-2"></div>

@@ -1,5 +1,8 @@
 import { marked } from 'marked';
-import Prism from 'prismjs';
+// Prism core must be evaluated before the language components, which register
+// themselves on it. Highlighting itself runs in the browser via
+// Prism.highlightAll() once the rendered HTML is in the DOM (see PostDetail).
+import 'prismjs';
 import 'prismjs/themes/prism-tomorrow.css';
 import 'prismjs/components/prism-javascript';
 import 'prismjs/components/prism-typescript';
@@ -17,29 +20,13 @@ export interface Post {
   content: string;
 }
 
-// Configure marked for better output with syntax highlighting
+// Configure marked. Note that marked v5 removed the `highlight`, `langPrefix`,
+// `headerIds`, `mangle`, `sanitize`, `smartLists` and `smartypants` options;
+// the default renderer already emits <pre><code class="language-x"> for fenced
+// blocks, which is what Prism.highlightAll() looks for.
 marked.setOptions({
   gfm: true, // GitHub Flavored Markdown
   breaks: true, // Convert line breaks to <br>
-  headerIds: true, // Add IDs to headers for linking
-  mangle: false, // Don't mangle email addresses
-  sanitize: false, // Allow HTML (we trust our content)
-  smartLists: true, // Use smarter list behavior
-  smartypants: true, // Use smart typographic punctuation
-  langPrefix: 'language-', // Add language class for Prism
-  highlight: function(code, lang) {
-    if (lang && Prism.languages[lang]) {
-      try {
-        const highlighted = Prism.highlight(code, Prism.languages[lang], lang);
-        return `<pre class="language-${lang}"><code class="language-${lang}">${highlighted}</code></pre>`;
-      } catch (err) {
-        console.warn('Prism highlighting failed for language:', lang, err);
-        return `<pre class="language-${lang}"><code class="language-${lang}">${code}</code></pre>`;
-      }
-    }
-    // For code blocks without language, still wrap them properly
-    return `<pre><code>${code}</code></pre>`;
-  }
 });
 
 // Import posts data generated at build time
@@ -50,7 +37,7 @@ const postsIndex: Post[] = postsIndexData;
 export async function getAllPosts(): Promise<Post[]> {
   return postsIndex.map(post => ({
     ...post,
-    content: marked(post.content)
+    content: marked(post.content, { async: false })
   }));
 }
 
@@ -60,6 +47,6 @@ export async function getPostBySlug(slug: string): Promise<Post | null> {
 
   return {
     ...post,
-    content: marked(post.content)
+    content: marked(post.content, { async: false })
   };
 }
