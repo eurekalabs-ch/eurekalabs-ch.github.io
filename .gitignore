@@ -9,5 +9,5 @@ CLAUDE.md
 # so nothing here may be committed: blog/ holds unpublished drafts carrying raw
 # campaign numbers and internal experiment references, docs/ holds the investor
 # plan and the editorial rules. Published figures live in public/blog/figures/.
-blog/
-docs/
+/blog/
+/docs/
