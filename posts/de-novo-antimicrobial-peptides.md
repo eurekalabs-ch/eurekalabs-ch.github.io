@@ -2,12 +2,12 @@
 title: "AI Scientists Discover De Novo Antimicrobial Peptides with 3.5× Greater Predicted Potency"
 date: "2026-11-16"
 author: "EurekaLabs"
-excerpt: "Our AI Scientist Team matches a published antimicrobial-peptide benchmark under identical conditions, then leaves the benchmark's similarity constraint behind: de novo designs at 17–36% identity to any natural template reach a 3.5× lower predicted MIC while every candidate still satisfies the selectivity requirement."
+excerpt: "Our AI Scientist Team achieves results that match or improve the best performance for eight of the ten peptide templates of a leading antimicrobial peptide model. It generates de novo drug candidates of 3.5× higher predicted potency."
 ---
 
 *Demonstrating how an AI Scientist Team can move beyond optimizing known molecules to discovering entirely new drug candidates while satisfying multiple biological objectives.*
 
-**If you read one thing:** Using a published oracle, our [AI Scientist Team](/posts/multi-agent-ai-scientist-protein-design) achieves results that match or improve the best performance for eight of its ten peptide templates. It generates de novo drug candidates at only 17–36% sequence identity to anything in nature, at a 3.5× lower predicted MIC.
+**If you read one thing:** Our [AI Scientist Team](/posts/multi-agent-ai-scientist-protein-design) achieves results that match or improve the best performance for eight of the ten peptide templates of a leading antimicrobial peptide model. It generates de novo drug candidates of 3.5× higher predicted potency.
 
 Antimicrobial resistance is one of the most pressing challenges in modern medicine. Particularly concerning are multidrug-resistant Gram-negative pathogens such as *Acinetobacter baumannii*, *Klebsiella pneumoniae* and *Pseudomonas aeruginosa*. Their protective outer membranes make them exceptionally difficult to treat with conventional antibiotics.
 
