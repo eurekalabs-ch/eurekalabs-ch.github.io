@@ -53,7 +53,9 @@ Most existing computational peptide-design approaches focus on generating or opt
 
 This is where our AI Scientist Team demonstrates a particularly interesting capability: it can explore molecular sequence space beyond the neighborhood of known molecules while maintaining the biological requirements of the discovery problem.
 
-To investigate this capability, we evaluated de novo designs without the 75% sequence-similarity restriction, keeping the prediction oracle, bacterial strain panel, antimicrobial objective and selectivity requirement unchanged.
+To investigate this capability, we removed the 75% sequence-similarity restriction and changed nothing else: the same prediction oracle, the same strain panel, the same antimicrobial objective.
+
+**The selectivity requirement stayed in force.** Every de novo design reported below was held to the same biological rule as the benchmark-constrained ones, a predicted MIC above 32 µmol/l against all four Gram-positive strains, and the requirement sits inside the objective the search optimizes rather than being applied afterwards as a filter. Dropping a similarity constraint is only interesting if the biology survives it.
 
 ![Predicted potency plotted against sequence similarity to the nearest natural template, for natural templates, benchmark-constrained designs and de novo designs](/blog/figures/fig107_potency_against_novelty_anon2.png)
 
@@ -61,11 +63,11 @@ To investigate this capability, we evaluated de novo designs without the 75% seq
 
 The results reveal a striking separation between three populations. Natural templates sit at the top right of the plot, with 100% sequence similarity to themselves and a median MIC of 352 µmol/l. Benchmark-constrained designs improve substantially, reaching a median MIC of 34.2 µmol/l, but remain within the predefined similarity boundary. De novo designs occupy a very different region: despite having only **17–36% sequence similarity** to their nearest natural templates, they achieve a median MIC of just **9.7 µmol/l**.
 
-This represents a **3.5× improvement in predicted potency** over benchmark-constrained designs.
+This represents a **3.5× improvement in predicted potency** over benchmark-constrained designs, achieved with the selectivity requirement applied throughout. Not one of these designs buys its potency by giving up selectivity: every one holds all four Gram-positive strains above the 32 µmol/l threshold, and not one incurs a penalty against that requirement.
 
 The gain is uniform rather than selective: every one of the ten template families improves, by between **18× and 46×** over its natural starting sequence. No single exceptional candidate carries the result. Natural antimicrobial peptides are unoptimized starting material, so this figure measures the distance traveled from nature; the measure of final quality is the 3.5× against designs that were themselves optimized.
 
-The most potent candidate is particularly interesting: a **12-amino-acid peptide with a predicted MIC of 3.85 µmol/l, while also satisfying the non-binding constraint against all four Gram-positive strains**. Its worst-case predicted Gram-positive MIC is 59.7 µmol/l, comfortably above the required 32 µmol/l threshold.
+The most potent candidate is particularly interesting: a **12-amino-acid peptide with a predicted MIC of 3.85 µmol/l that also meets the selectivity requirement against all four Gram-positive strains**. Its worst-case predicted Gram-positive MIC is 59.7 µmol/l, comfortably above the required 32 µmol/l threshold.
 
 This is more than an incremental improvement to a known molecule. It demonstrates the ability of our system to identify entirely new molecular candidates with substantially improved predicted properties while respecting multiple biological requirements.
 
@@ -133,7 +135,7 @@ The antimicrobial peptide results provide an initial demonstration of this capab
 | Potency improvement | 3.5× over benchmark-constrained designs |
 | Consistency | All 10 template families improve |
 | Best predicted candidate | 3.85 µmol/l |
-| Selectivity | All candidates satisfy the 32 µmol/l threshold |
+| Selectivity | Required throughout, including de novo: all candidates satisfy the 32 µmol/l threshold |
 | Best candidate's Gram-positive MIC | 59.7 µmol/l |
 
 **The broader implication:** We are moving from AI that modifies existing molecules toward AI Scientist Teams that discover entirely new candidates while optimizing multiple biological objectives simultaneously.
