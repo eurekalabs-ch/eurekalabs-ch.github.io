@@ -19,8 +19,16 @@ export const site = {
    */
   productUrl: "",
 
-  /** Contact address for the careers and partner calls to action. */
-  contactEmail: "",
+  /**
+   * Contact address for the partner and careers calls to action.
+   * A role address on our own domain, which forwards via the registrar's
+   * email forwarding (Namecheap eforward, see the domain's MX records).
+   * Setting it here lights up the homepage CTA button and the footer contact
+   * block. Post bodies are Markdown and cannot read this file, so a post that
+   * closes with a call to action spells the address out; `git grep` for it
+   * before changing this value.
+   */
+  contactEmail: "contact@eurekalabs.ch",
 
   /** Social profiles. Only non-empty entries are rendered. */
   social: {
