@@ -18,7 +18,7 @@ const Footer = () => {
           <div className="space-y-4">
             <div className="text-2xl font-bold text-eureka-blue">EurekaLabs</div>
             <p className="text-gray-400">
-              A research organization of AI Scientists for protein drug design.
+              Building a Scientific Discovery Engine.
             </p>
           </div>
 
