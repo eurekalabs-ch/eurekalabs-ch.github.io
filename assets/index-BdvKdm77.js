@@ -200,7 +200,7 @@ This provides a meaningful benchmark against which to evaluate our system.
 
 We therefore started with the same optimization problem: the same APEX 1.1 prediction oracle, the same eleven-strain panel, the same antimicrobial objective and the same 75% sequence-similarity constraint.
 
-Every MIC in this post is a prediction from that oracle rather than a wet-lab measurement, as is every number we are compared against, because the published baseline is scored by the same instrument. Both sides are therefore measured with the same ruler, which is what makes the comparison a fair one. Experimental validation of the new candidates is the next step, and it is already under way.
+Every MIC in this post is a prediction from that oracle rather than a wet-lab measurement, as is every number we are compared against, because the published baseline is scored by the same instrument. Both sides are therefore measured with the same ruler, which is what makes the comparison a fair one. Experimental validation of the new candidates is the next step.
 
 ![Ten peptide templates: our design against the published ApexGO optimum for each, scored by the same oracle](/blog/figures/fig106_designs_against_the_published_optima_anon.png)
 
