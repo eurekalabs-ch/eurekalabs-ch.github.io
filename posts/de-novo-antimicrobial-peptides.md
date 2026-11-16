@@ -146,7 +146,7 @@ That is the foundation of a scalable AI-driven molecular discovery platform.
 
 ### Work with us on the next campaign
 
-We run these campaigns against our partners' targets: a defined objective, an explicit set of constraints, and a ranked shortlist of candidates to take into the laboratory. If you are developing peptide or protein therapeutics and want the next shortlist to come from a system that optimizes every requirement at once, write to [contact@eurekalabs.ch](mailto:contact@eurekalabs.ch).
+If you are developing peptide or protein therapeutics and want the next shortlist to come from a system that optimizes every requirement at once, contact us at [contact@eurekalabs.ch](mailto:contact@eurekalabs.ch).
 
 ---
 
