@@ -13,5 +13,10 @@ The three January 2025 files here (`welcome-to-eurekalabs`, `the-future-of-ai-re
 capabilities that were never built, a universal knowledge graph, automatic translation of
 research, open-access tools, and they contain no result, method or artifact. They are kept,
 unedited, rather than rewritten: a dated post is evidence only if its date means something, so
-a post is either kept as written or withdrawn, never silently brought up to date. The thinking
-that replaced them is published honestly dated in `posts/from-text-to-molecules.md`.
+a post is either kept as written or withdrawn, never silently brought up to date.
+
+`from-text-to-molecules.md` is finished and was briefly published, then withdrawn: the pivot
+argument is not something the site should state in its own post for now. It is kept here
+complete, so publishing it again is a matter of moving the file back and regenerating the
+index. If it returns, the cross-link from `posts/post_proposalAssistant.md` should return with
+it; that sentence was removed so the published post carries no link to a withdrawn page.
