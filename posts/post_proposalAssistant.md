@@ -7,7 +7,7 @@ excerpt: "Two early multi-agent systems from 2025: nine agents taking a research
 
 *Building sophisticated multi-agent systems for scientific research*
 
-> **A note added in November 2026.** This post describes work from the summer of 2025, when our multi-agent systems were pointed at the research workflow rather than at molecules. It is left here as it was written. The architecture it describes, specialized agents with separate responsibilities and an independent critic scoring the work against a rubric it did not write, is the architecture we now run over protein design campaigns, where the rubric is a laboratory measurement rather than a review panel. We explain the move in [From text to molecules](/posts/from-text-to-molecules).
+> **A note added in November 2026.** This post describes work from the summer of 2025, when our multi-agent systems were pointed at the research workflow rather than at molecules. It is left here as it was written. The architecture it describes, specialized agents with separate responsibilities and an independent critic scoring the work against a rubric it did not write, is the architecture we now run over protein design campaigns, where the rubric is a laboratory measurement rather than a review panel. We explain the move in [Choosing a problem that can tell us we are wrong](/posts/from-text-to-molecules).
 
 We built two systems that summer, on the same architecture and with the same conviction: that the way to make a language model do serious scholarly work is to stop asking one model to do all of it. The first takes a research idea to a submission-ready grant proposal. The second takes a project description to a related work section. Both are described below.
 

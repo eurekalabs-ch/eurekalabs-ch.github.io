@@ -1,5 +1,5 @@
 ---
-title: "From Text to Molecules: Choosing a Problem That Can Tell Us We Are Wrong"
+title: "Choosing a Problem That Can Tell Us We Are Wrong"
 date: "2026-11-01"
 author: "EurekaLabs"
 excerpt: "Our first multi-agent systems wrote grant proposals and literature reviews. They worked, and we could not prove it: a document has no fast ground truth. A designed molecule does, which is why the AI Scientist Team now designs molecules."
