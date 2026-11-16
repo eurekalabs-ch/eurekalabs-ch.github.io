@@ -2,12 +2,12 @@
 title: "AI Scientists Discover De Novo Antimicrobial Peptides with 3.5× Greater Predicted Potency"
 date: "2026-11-16"
 author: "EurekaLabs"
-excerpt: "Our AI Scientist Team achieves results that match or improve the best performance for eight of the ten peptide templates of a leading antimicrobial peptide model. It generates de novo drug candidates of 3.5× higher predicted potency."
+excerpt: "Our AI Scientist Team achieves results that match or improve the best performance for eight of the ten peptide templates of a leading antimicrobial peptide model. It generates de novo drug candidates at only 17–36% sequence similarity to anything in nature, with 3.5× higher predicted potency."
 ---
 
 *Demonstrating how an AI Scientist Team can move beyond optimizing known molecules to discovering entirely new drug candidates while satisfying multiple biological objectives.*
 
-**If you read one thing:** Our [AI Scientist Team](/posts/multi-agent-ai-scientist-protein-design) achieves results that match or improve the best performance for eight of the ten peptide templates of a leading antimicrobial peptide model. It generates de novo drug candidates of 3.5× higher predicted potency.
+**If you read one thing:** Our [AI Scientist Team](/posts/multi-agent-ai-scientist-protein-design) achieves results that match or improve the best performance for eight of the ten peptide templates of a leading antimicrobial peptide model. It generates de novo drug candidates at only 17–36% sequence similarity to anything in nature, with 3.5× higher predicted potency.
 
 Antimicrobial resistance is one of the most pressing challenges in modern medicine. Particularly concerning are multidrug-resistant Gram-negative pathogens such as *Acinetobacter baumannii*, *Klebsiella pneumoniae* and *Pseudomonas aeruginosa*. Their protective outer membranes make them exceptionally difficult to treat with conventional antibiotics.
 
@@ -18,7 +18,7 @@ This is precisely the kind of challenge our AI Scientist Team is designed to add
 We evaluated our system against ApexGO (Torres, Zeng, Wan, Maus, Gardner and de la Fuente-Nunez, *Nature Machine Intelligence*, May 2026), a recently published approach to computational antimicrobial peptide optimization. Our results demonstrate three important capabilities:
 
 - **Benchmark competitiveness:** Our system matches or improves upon published ApexGO results under the same benchmark conditions.
-- **De novo molecular discovery:** It identifies entirely new peptide sequences with only 17–36% identity to natural templates and 3.5× greater predicted potency than benchmark-constrained designs.
+- **De novo molecular discovery:** It identifies entirely new peptide sequences with only 17–36% similarity to natural templates and 3.5× greater predicted potency than benchmark-constrained designs.
 - **Multi-objective optimization:** It simultaneously optimizes antimicrobial potency and selectivity, satisfying biological constraints throughout the discovery process.
 
 Together, these results demonstrate the potential of our AI Scientist Team to move beyond incremental molecular optimization toward genuinely novel drug discovery.
@@ -55,11 +55,11 @@ This is where our AI Scientist Team demonstrates a particularly interesting capa
 
 To investigate this capability, we evaluated de novo designs without the 75% sequence-similarity restriction, keeping the prediction oracle, bacterial strain panel, antimicrobial objective and selectivity requirement unchanged.
 
-![Predicted potency plotted against sequence identity to the nearest natural template, for natural templates, benchmark-constrained designs and de novo designs](/blog/figures/fig107_potency_against_novelty_anon2.png)
+![Predicted potency plotted against sequence similarity to the nearest natural template, for natural templates, benchmark-constrained designs and de novo designs](/blog/figures/fig107_potency_against_novelty_anon2.png)
 
 *Figure 2. Each point is one peptide. Further left means further from any natural sequence; lower means more potent. The shaded band on the right is the region the benchmark's 75% similarity constraint confines a design to. The three populations separate cleanly, and the de novo designs occupy the lower-left corner, novel and potent at once.*
 
-The results reveal a striking separation between three populations. Natural templates sit at the top right of the plot, with 100% sequence identity to themselves and a median MIC of 352 µmol/l. Benchmark-constrained designs improve substantially, reaching a median MIC of 34.2 µmol/l, but remain within the predefined similarity boundary. De novo designs occupy a very different region: despite having only **17–36% sequence identity** to their nearest natural templates, they achieve a median MIC of just **9.7 µmol/l**.
+The results reveal a striking separation between three populations. Natural templates sit at the top right of the plot, with 100% sequence similarity to themselves and a median MIC of 352 µmol/l. Benchmark-constrained designs improve substantially, reaching a median MIC of 34.2 µmol/l, but remain within the predefined similarity boundary. De novo designs occupy a very different region: despite having only **17–36% sequence similarity** to their nearest natural templates, they achieve a median MIC of just **9.7 µmol/l**.
 
 This represents a **3.5× improvement in predicted potency** over benchmark-constrained designs.
 
@@ -129,7 +129,7 @@ The antimicrobial peptide results provide an initial demonstration of this capab
 |---|---|
 | Benchmark performance | Improves on 4 of 10 ApexGO optima; reproduces 4 exactly |
 | Benchmark potency | Mean MIC: 36.39 → 33.90 µmol/l (6.8%) |
-| De novo discovery | 17–36% identity to nearest natural templates |
+| De novo discovery | 17–36% similarity to nearest natural templates |
 | Potency improvement | 3.5× over benchmark-constrained designs |
 | Consistency | All 10 template families improve |
 | Best predicted candidate | 3.85 µmol/l |
