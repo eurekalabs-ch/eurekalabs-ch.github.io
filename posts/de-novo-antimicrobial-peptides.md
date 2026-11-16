@@ -45,7 +45,7 @@ Across the ten templates, the mean MIC against the seven Gram-negative strains d
 
 A few percent is the honest size of the gain here, and that is the point of this section rather than a caveat to it: the benchmark is a narrow, heavily worked problem whose published solutions were synthesized and tested in the laboratory, and we match or beat them on eight of ten templates under conditions none of which we chose. That establishes the system as a legitimate optimizer. The large gains appear once the benchmark's own constraint is lifted.
 
-**Our system demonstrates competitive performance against an established approach, providing a foundation for exploring a much larger molecular search space.**
+**Our system demonstrates competitive performance against an established approach, providing a foundation for exploring a much larger molecular space.**
 
 ## Beyond optimization: discovering entirely new drug candidates
 
@@ -55,7 +55,7 @@ This is where our AI Scientist Team demonstrates a particularly interesting capa
 
 To investigate this capability, we removed the 75% sequence-similarity restriction and changed nothing else: the same prediction oracle, the same strain panel, the same antimicrobial objective.
 
-**The selectivity requirement stayed in force.** Every de novo design reported below was held to the same biological rule as the benchmark-constrained ones, a predicted MIC above 32 µmol/l against all four Gram-positive strains, and the requirement sits inside the objective the search optimizes rather than being applied afterwards as a filter. Dropping a similarity constraint is only interesting if the biology survives it.
+**The selectivity requirement stayed in force.** Every de novo design reported below was held to the same biological rule as the benchmark-constrained ones, a predicted MIC above 32 µmol/l against all four Gram-positive strains, and the requirement sits inside the objective our system designs against rather than being applied afterwards as a filter.
 
 ![Predicted potency plotted against sequence similarity to the nearest natural template, for natural templates, benchmark-constrained designs and de novo designs](/blog/figures/fig107_potency_against_novelty_anon2.png)
 
@@ -63,7 +63,7 @@ To investigate this capability, we removed the 75% sequence-similarity restricti
 
 The results reveal a striking separation between three populations. Natural templates sit at the top right of the plot, with 100% sequence similarity to themselves and a median MIC of 352 µmol/l. Benchmark-constrained designs improve substantially, reaching a median MIC of 34.2 µmol/l, but remain within the predefined similarity boundary. De novo designs occupy a very different region: despite having only **17–36% sequence similarity** to their nearest natural templates, they achieve a median MIC of just **9.7 µmol/l**.
 
-This represents a **3.5× improvement in predicted potency** over benchmark-constrained designs, achieved with the selectivity requirement applied throughout. Not one of these designs buys its potency by giving up selectivity: every one holds all four Gram-positive strains above the 32 µmol/l threshold, and not one incurs a penalty against that requirement.
+This represents a **3.5× improvement in predicted potency** over benchmark-constrained designs, achieved with the selectivity requirement applied throughout. Not one of these designs buys its potency by giving up selectivity: every one holds all four Gram-positive strains above the 32 µmol/l threshold.
 
 The gain is uniform rather than selective: every one of the ten template families improves, by between **18× and 46×** over its natural starting sequence. No single exceptional candidate carries the result. Natural antimicrobial peptides are unoptimized starting material, so this figure measures the distance traveled from nature; the measure of final quality is the 3.5× against designs that were themselves optimized.
 
@@ -91,7 +91,7 @@ The most potent candidate achieves a predicted Gram-negative MIC of 3.85 µmol/l
 
 Releasing the similarity constraint does move the set slightly closer to the selectivity wall: the de novo designs' median worst-case Gram-positive MIC is 32.6 µmol/l, against 34.2 µmol/l for the benchmark-constrained set. Every design in both sets is feasible, none incurs any constraint penalty, because the objective requires selectivity; the next iteration rewards headroom above the threshold rather than merely requiring it.
 
-The important result is that our system does not simply search for peptides with maximum antimicrobial activity. It identifies candidates that balance antimicrobial potency and selectivity simultaneously.
+The important result is that our system does not simply pursue peptides with maximum antimicrobial activity. It identifies candidates that balance antimicrobial potency and selectivity simultaneously.
 
 ## From generative models to constraint-aware molecular discovery
 
@@ -101,7 +101,7 @@ A common strategy is to generate candidates first and subsequently filter or re-
 
 **Our approach is fundamentally different. We use an AI Scientist Team as an integrated molecular discovery system, rather than relying on a standalone generative model.**
 
-The system incorporates objectives and feasibility constraints directly into the iterative optimization process. Antimicrobial potency across seven Gram-negative strains, selectivity against four Gram-positive strains and the relevant feasibility requirements are evaluated together throughout the search.
+The system incorporates objectives and feasibility constraints directly into the iterative optimization process. Antimicrobial potency across seven Gram-negative strains, selectivity against four Gram-positive strains and the relevant feasibility requirements are evaluated together throughout the design process.
 
 This allows the AI Scientist Team to direct its exploration toward candidates that satisfy the actual requirements of the discovery problem, rather than generating large numbers of molecules that must subsequently be discarded.
 
@@ -111,15 +111,15 @@ Crucially, the same approach can incorporate additional properties such as solub
 
 ## Toward a new paradigm in molecular discovery
 
-Antimicrobial peptide discovery provides a particularly useful demonstration of our approach because it combines a large molecular search space with competing biological objectives and explicit feasibility requirements.
+Antimicrobial peptide discovery provides a particularly useful demonstration of our approach because it combines an enormous molecular space with competing biological objectives and explicit feasibility requirements.
 
 But the underlying challenge is much broader.
 
 In drug discovery, a promising molecule must rarely optimize just one property. Potency, selectivity, stability, solubility, toxicity and manufacturability all influence whether a candidate can progress toward a viable therapeutic. These requirements interact, and improving one property can easily compromise another.
 
-The three capabilities shown here address exactly that difficulty, and they build on one another: the AI Scientist Team is competitive with an established approach under identical benchmark conditions, it remains competitive once the similarity constraint that defined the benchmark is removed and the search moves far away from known templates, and it does both while holding a selectivity requirement throughout rather than imposing it afterwards. Benchmark competitiveness alone would show only that the system is a credible optimizer; de novo discovery alone would be unconvincing without the constraint; it is the combination that matters for a therapeutic program.
+The three capabilities shown here address exactly that difficulty, and they build on one another: the AI Scientist Team is competitive with an established approach under identical benchmark conditions, it remains competitive once the similarity constraint that defined the benchmark is removed and the designs move far away from known templates, and it does both while holding a selectivity requirement throughout rather than imposing it afterwards. Benchmark competitiveness alone would show only that the system is a credible optimizer; de novo discovery alone would be unconvincing without the constraint; it is the combination that matters for a therapeutic program.
 
-Rather than simply generating molecules or optimizing individual properties, we are building AI systems that actively explore molecular space, reason about competing objectives and systematically search for candidates that satisfy the requirements of real-world applications.
+Rather than simply generating molecules or optimizing individual properties, we are building AI systems that actively explore molecular space, reason about competing objectives and systematically discover candidates that satisfy the requirements of real-world applications.
 
 The antimicrobial peptide results provide an initial demonstration of this capability. The next step is to take the most promising candidates into experimental validation and establish how well the computational improvements translate into biological activity.
 
