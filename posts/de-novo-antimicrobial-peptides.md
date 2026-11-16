@@ -57,7 +57,7 @@ To investigate this capability, we removed the 75% sequence-similarity restricti
 
 **The selectivity requirement stayed in force.** Every de novo design reported below was held to the same biological rule as the benchmark-constrained ones, a predicted MIC above 32 µmol/l against all four Gram-positive strains, and the requirement sits inside the objective our system designs against rather than being applied afterwards as a filter.
 
-![Predicted potency plotted against sequence similarity to the nearest natural template, for natural templates, benchmark-constrained designs and de novo designs](/blog/figures/fig107_potency_against_novelty_anon2.png)
+![Predicted potency plotted against sequence similarity to the nearest natural template, for natural templates, benchmark-constrained designs and de novo designs](/blog/figures/fig107_potency_against_novelty_anon3.png)
 
 *Figure 2. Each point is one peptide. Further left means further from any natural sequence; lower means more potent. The shaded band on the right is the region the benchmark's 75% similarity constraint confines a design to. The three populations separate cleanly, and the de novo designs occupy the lower-left corner, novel and potent at once.*
 
