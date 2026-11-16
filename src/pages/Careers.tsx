@@ -13,9 +13,7 @@ const Careers = () => {
           <h1 className="text-4xl font-bold text-gray-900 mb-6">Careers</h1>
           <p className="text-xl text-gray-600 leading-relaxed">
             We are always looking for motivated scientists and engineers as collaborators and
-            potential future colleagues. The work sits where machine learning meets molecules:
-            designing peptides and proteins, building the systems that evaluate them, and being
-            judged by what the laboratory measures.
+            potential future colleagues.
           </p>
 
           {site.contactEmail && (
