@@ -59,7 +59,7 @@ To investigate this capability, we removed the 75% sequence-similarity restricti
 
 ![Predicted potency plotted against sequence similarity to the nearest natural template, for natural templates, benchmark-constrained designs and de novo designs](/blog/figures/fig107_potency_against_novelty_anon3.png)
 
-*Figure 2. Each point is one peptide. Further left means further from any natural sequence; lower means more potent. The shaded band on the right is the region the benchmark's 75% similarity constraint confines a design to. The three populations separate cleanly, and the de novo designs occupy the lower-left corner, novel and potent at once.*
+*Figure 2. One point per peptide: further left is further from nature, lower is more potent. The shaded band is where the benchmark's 75% similarity constraint confines a design. The de novo designs occupy the lower left, novel and potent at once.*
 
 The results reveal a striking separation between three populations. Natural templates sit at the top right of the plot, with 100% sequence similarity to themselves and a median MIC of 352 µmol/l. Benchmark-constrained designs improve substantially, reaching a median MIC of 34.2 µmol/l, but remain within the predefined similarity boundary. De novo designs occupy a very different region: despite having only **17–36% sequence similarity** to their nearest natural templates, they achieve a median MIC of just **9.7 µmol/l**.
 
